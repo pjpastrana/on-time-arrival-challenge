@@ -36,7 +36,7 @@ nov2014 = nov2014[cols_of_interests].dropna().sample(n=9400)
 dec2014 = dec2014[cols_of_interests].dropna().sample(n=9400)
 
 training_data = pd.concat([jan2014,feb2014,mar2014,apr2014,may2014,jun2014,jul2014,aug2014,sep2014,oct2014,nov2014,dec2014])
-training_data.to_csv("training_data.csv", index=False)
+training_data.to_csv(DATA_PATH+"/training_data.csv", index=False)
 
 #----------------------------------------------------------------------------------------------------
 jan2015 = pd.read_csv(DATA_PATH+"/JAN2015/108043198_T_ONTIME.csv")
@@ -66,4 +66,4 @@ nov2015 = nov2015[cols_of_interests].dropna().sample(n=9400)
 dec2015 = dec2015[cols_of_interests].dropna().sample(n=9400)
 
 testing_data = pd.concat([jan2015,feb2015,mar2015,apr2015,may2015,jun2015,jul2015,aug2015,sep2015,oct2015,nov2015,dec2015])
-testing_data.to_csv("testing_data.csv", index=False)
+testing_data.to_csv(DATA_PATH+"/testing_data.csv", index=False)
